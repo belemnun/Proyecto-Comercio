@@ -1,0 +1,345 @@
+:root {
+    --dorado: #a48156;
+    --blanco: #ffffff;
+    --azul: #92FFF5;
+    --naranja: #FF9C15;
+    --negro: #393939;
+    --gris: #666666;
+    --blanco-gris: #f3f3f3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+header, .nav-bg {
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.iconos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+.iconos img {
+    margin-left: 2rem;
+}
+
+.iconos img:first-child {
+    margin-right: 1rem;
+}
+
+.nav-bg {
+    background-color: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+}
+
+.navegacion-principal {
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+.navegacion-principal a:hover {
+    color: var(--naranja);
+}
+
+@media (min-width: 1024px) {
+    .logo img, .logo svg {
+        width: auto;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: fill;
+}
+
+.texto-inferior {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+        object-fit: fill;
+    }
+
+    .texto-inferior {
+        font-size: 1.5rem;
+        margin-top: 0.5em;
+    }
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.contenedor-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 2rem;
+    width: 65%;
+}
+
+.item {
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+
+.img-item {
+    width: 100%;
+}
+
+.titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Carrito */
+/* Carrito */
+.carrito {
+    border: 1px solid var(--negro);
+    width: 30%;
+    max-width: 300px; 
+    margin-left: auto; 
+    margin-right: 2rem; 
+    border-radius: 10px;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    max-height: 80vh;
+    padding: 1rem;
+    background-color: var(--blanco);
+}
+
+
+@media screen and (max-width: 850px) {
+    .carrito {
+        width: 100%;
+        max-width: none; 
+        margin-top: 1rem; 
+        margin-left: 0;
+        margin-right: 0; 
+        border-radius: 0; 
+    }
+}
+
+.header-carrito {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.carrito-items {
+    padding: 1rem;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gris);
+    padding: 1rem 0;
+}
+
+.carrito-item img {
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.carrito-item-titulo {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.carrito-item-cantidad {
+    border: none;
+    font-size: 1.8rem;
+    background: transparent;
+    display: inline-block;
+    width: 3rem;
+    text-align: center;
+}
+
+.selector-cantidad i {
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--negro);
+    cursor: pointer;
+}
+
+.carrito-item-precio {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-eliminar {
+    color: var(--negro);
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--negro);
+    cursor: pointer;
+    background: transparent;
+    min-width: 4rem; 
+    min-height: 4rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: var(--blanco-gris);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.btn-pagar:hover {
+    scale: 1.05;
+}
+
+@media screen and (max-width: 850px) {
+    .contenedor-principal {
+        display: block;
+        padding: 0;
+    }
+    .contenedor-items {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .carrito {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+}
+
